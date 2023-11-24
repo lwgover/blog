@@ -14,6 +14,6 @@
     <clipPath id="intersection">
       <circle cx="70" cy="100" r="70" />
     </clipPath>
-    <circle cx="130" cy="100" r="70" fill="#ffffff" clip-path="url(#intersection)" />
+    <circle cx="130" cy="100" r="70" fill="var(--text-color)" clip-path="url(#intersection)" style='transition: all 0.3s' />
   </g>
 </svg>

@@ -1,0 +1,52 @@
+.article-title {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: normal;
+    position: relative;
+    background-color: #fff;
+    overflow:hidden;
+    padding: 0;
+    margin-top: 5px;
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--background-color)
+    }
+  
+    a{
+      text-transform: lowercase;
+      font-style: normal !important;
+      color: lighten(black, 10%);
+      @media (prefers-color-scheme: dark) {
+        color: saturate(lighten(adjust-hue(#ff0000, 10deg), 10%), 20%);
+        color: darken(white, 10%),
+      }
+  
+      &:hover {
+        transition: all 0.25s;
+        color: white;
+        text-decoration: none;
+        background-color: black;
+        @media (prefers-color-scheme: dark) {
+          color: $color-title;
+          background-color: white;
+        }
+      }
+    }
+  }
+      @supports(mix-blend-mode: lighten) {
+    .article-title:hover::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      background: linear-gradient(60deg, adjust-hue($primary, -25deg), adjust-hue($primary, 25deg));
+      mix-blend-mode: lighten;
+      @media (prefers-color-scheme: dark) {
+        mix-blend-mode: darken;
+      }
+    }
+  }

@@ -2,28 +2,34 @@
     import Seo from "../lib/Seo.svelte";
     import Waves from "../lib/Waves.svelte";
     import Logo from "../lib/Logo.svelte"
+    import Header from '$lib/Header.svelte'
+
+    export let data;
 </script>
 
 <section>
     <Seo title={"Lucas's Blog"} description={"Lucas's Blog"} />
-    <div class='blog-header'>
-        <div class='logo-container'>
-        <Logo height={"120px"} width={"120px"}/>
-        </div>
-        <div class='blog-header-words-container vertically-align'>
-            <p class="blog-title">Lucas's Blog</p>
-            <div class="gradient-underline" style='transform:translate(0,-20px); width:83%; height: 5px; margin-left:15px;'/>
-        </div>
-    </div>
+    <Header/>
     <div class="two-columns">
-        <div>
-            
+        <div class='column'>
             <div class="blog-section-header">
                 <p class="blog-section-title">Chronological</p>
                 <div class="gradient-underline" />
             </div>
+            <ul class='posts'>
+                {#each data.posts as post}
+                    <li class='post'>
+                        <h2 class='article'>
+                            <a href={post.path} class='article-title'>
+                                {post.meta.title}
+                            </a>
+                        </h2>
+                        <p class='published-date'>{post.meta.date}</p>
+                    </li>
+                {/each}
+            </ul>
         </div>
-        <div>
+        <div class='column'>
             <p class='quote'>Think of this as a series of long-form tweets.</p>
         </div>
         
@@ -31,47 +37,46 @@
 </section>
 
 <style>
-    .logo-container {
-        display: inline-block;
-        width:fit-content;
-        height:fit-content;
+    .post{
+        margin-top:10px;
+    }
+    .published-date {
+        color:gray;
         margin:0px;
         padding:0px;
-        vertical-align:middle;
+        font-size:14px;
+        text-align: left;
+        text-style: italic;
     }
-    .vertically-align {
-        display: inline-block; 
-        vertical-align:middle;
+    .article-title {
+        font-family: var(--font-sans);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: normal;
+        transition: all 0.2s;
+        text-decoration:none;
+        overflow:hidden;
     }
-    .blog-title {
+    .article:hover {
+        color: var(--background-color);
+        background-image: linear-gradient(to right, var(--title-color), var(--middle-color), var(--accent-color));
+        border-radius: 1px;
+    }
+    .posts {
+        list-style-type: none;
         margin: 0px;
-        padding: 0px;
-        color: white;
-        font-size: 56px;
-        width: fit-content;
-        padding: 10px;
-        font-weight: 300;
-        letter-spacing: 3px;
-        border-radius: 5px;
-        transition: all 0.3s;
-        display:inline-block;
+        padding:2px;
+        text-decoration:none
     }
-    .blog-header {
+    .article {
+        color:var(--text-color);;
+        margin: 0px;
+        padding:0px;
         width:fit-content;
-        margin: 30px;
-        margin-top:20px;
-    }
-    .header-subtitle {
-        color:#d81159;
-        font-size: 18px;
-        margin:5px;
-        font-weight: 300;
-        width:fit-content;
-        margin:auto;
     }
     .quote {
-        color:white;
-        border-left: white solid 5px;
+        color:var(--text-color);;
+        border-left: var(--text-color) solid 5px;
         padding: 20px;
         font-family: var(--font-sans);
         letter-spacing: 1.5px;;
@@ -88,17 +93,18 @@
         letter-spacing: 2px;
         padding:5px;
         padding-bottom: 0px;
-        border: white solid 3px;
+        border: var(--text-color) solid 3px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px; 
         border-bottom: 0px;
     }
     .blog-section-header {
         width:fit-content;
-        background-color: #ffffff;
+        background-color: var(--text-color);
         border-radius: 7px;
         overflow: hidden;
         margin-left: 0px;
+        margin-bottom:15px;
     }
     /* container */
     .two-columns {
@@ -111,11 +117,5 @@
     .two-columns > * {
         width: 50%;
         padding: 1rem;
-    }
-    .gradient-underline {
-        width: 100%;
-        height: 7px;
-        background-image: linear-gradient(to right, #d81159, #218380);
-        margin: 0px;
     }
 </style>

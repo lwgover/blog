@@ -2,14 +2,14 @@
 	import '$lib/styles/styles.css';
 </script>
 
-<div class="app">
+<div class="article">
 	<main>
 		<slot />
 	</main>
 </div>
 
 <style>
-	.app {
+	.article {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
