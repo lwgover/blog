@@ -19,6 +19,7 @@
 		"mdsvex": "^0.11.0",
 		"sass": "^1.69.5",
 		"svelte": "^4.0.5",
+		"svelte-adapter-firebase": "^0.15.0",
 		"svelte-check": "^3.6.0",
 		"svelte-preprocess": "^5.1.1",
 		"typescript": "^5.0.0",
@@ -27,7 +28,6 @@
 	"type": "module",
 	"dependencies": {
 		"firebase": "^10.6.0",
-		"svelte-adapter-firebase": "^0.15.0",
 		"svelte-markdown": "^0.4.0"
 	}
 }
