@@ -1,11 +1,13 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
+import firebase from "svelte-adapter-firebase";
 import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
 		/* Kit options here */
+		adapter: firebase(),
 	},
 
 	extensions: ['.svelte', '.md'],

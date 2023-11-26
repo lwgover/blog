@@ -11,7 +11,7 @@
     <Seo title={"Lucas's Blog"} description={"Lucas's Blog"} />
     <Header/>
     <div class="two-columns">
-        <div class='column'>
+        <div class='column left-column'>
             <div class="blog-section-header">
                 <p class="blog-section-title">Chronological</p>
                 <div class="gradient-underline" />
@@ -29,7 +29,7 @@
                 {/each}
             </ul>
         </div>
-        <div class='column'>
+        <div class='column right-column'>
             <p class='quote'>Think of this as a series of long-form tweets.</p>
         </div>
         
@@ -46,7 +46,7 @@
         padding:0px;
         font-size:14px;
         text-align: left;
-        text-style: italic;
+        font-style: italic;
     }
     .article-title {
         font-family: var(--font-sans);
@@ -61,15 +61,16 @@
         color: var(--background-color);
         background-image: linear-gradient(to right, var(--title-color), var(--middle-color), var(--accent-color));
         border-radius: 1px;
+        padding-left:3px;
     }
     .posts {
         list-style-type: none;
         margin: 0px;
         padding:2px;
-        text-decoration:none
+        text-decoration:none;
     }
     .article {
-        color:var(--text-color);;
+        color:var(--text-color);
         margin: 0px;
         padding:0px;
         width:fit-content;
@@ -87,24 +88,25 @@
     .blog-section-title {
         color:var(--background-color);
         font-weight: 400;
-        font-size: 42px;
+        font-size: 2.5rem;
         padding:0px;
         margin:0px;
         letter-spacing: 2px;
         padding:5px;
         padding-bottom: 0px;
-        border: var(--text-color) solid 3px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px; 
         border-bottom: 0px;
+        transition: all 0.3s;
     }
     .blog-section-header {
         width:fit-content;
-        background-color: var(--text-color);
+        background-color: var(--header-color);
         border-radius: 7px;
         overflow: hidden;
         margin-left: 0px;
         margin-bottom:15px;
+        transition: all 0.3s;
     }
     /* container */
     .two-columns {
@@ -118,4 +120,31 @@
         width: 50%;
         padding: 1rem;
     }
+
+.left-column {
+  flex: 1;
+  /* Adjust any additional styling for the left column */
+}
+
+.right-column {
+  flex: 1;
+  /* Adjust any additional styling for the right column */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .two-columns {
+    flex-direction: column;
+    
+  }
+  .two-columns > * {
+        width: 95%;
+        padding: 1rem;
+    }
+
+  /* On mobile, the right column will be on top of the left column */
+  .right-column {
+    order: -1;
+  }
+}
 </style>

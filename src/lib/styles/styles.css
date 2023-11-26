@@ -10,10 +10,11 @@
 	--background-accent-color: #242436;
 	--title-color: #d81159;
 	--accent-color: #218380;
-	--header-colors: #ffffff;
+	--header-color: #ffffff;
 	--text-color: #ffffff;
 	--blog-text-color: #ffffff;
 	--middle-color: #7c5db2;
+	--article-text-color: #cfcfcf;
 	transition: all 0.3s
 	}
 body {
@@ -147,4 +148,9 @@ button:focus:not(:focus-visible) {
 	height: 7px;
 	background-image: linear-gradient(45deg, var(--title-color), var(--middle-color), var(--accent-color));
 	margin: 0px;
+}
+@media (max-width: 767px) {
+        .blog-title {
+			font-size: 2em;
+		}
 }
