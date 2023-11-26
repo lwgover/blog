@@ -5,6 +5,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"deploy":"npm run build && firebase deploy --only hosting",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
@@ -13,7 +14,7 @@
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.3",
-		"@sveltejs/kit": "^1.27.4",
+		"@sveltejs/kit": "^1.27.6",
 		"@types/cookie": "^0.5.1",
 		"carbon-components-svelte": "^0.82.4",
 		"mdsvex": "^0.11.0",

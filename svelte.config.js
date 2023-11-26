@@ -7,7 +7,7 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	kit: {
 		/* Kit options here */
-		adapter: firebase(),
+		adapter: adapter(),
 	},
 
 	extensions: ['.svelte', '.md'],

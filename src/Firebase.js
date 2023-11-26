@@ -12,8 +12,8 @@ const firebaseConfig = {
   projectId: "blog-397f9",
   storageBucket: "blog-397f9.appspot.com",
   messagingSenderId: "302244513617",
-  appId: "1:302244513617:web:247598fcc241bde90bb570",
-  measurementId: "G-712Z3H57M0"
+  appId: "1:302244513617:web:68c3c7005bb4cad90bb570",
+  measurementId: "G-T331K26FTT"
 };
 
 // Initialize Firebase
