@@ -5,6 +5,7 @@
     import Header from "$lib/Header.svelte";
 
     export let data;
+    console.log(data);
 </script>
 
 <section>
@@ -47,6 +48,7 @@
 </section>
 
 <style>
+
     .post {
         margin-top: 10px;
     }
@@ -104,9 +106,9 @@
         color: var(--text-color);
         padding: 0px;
         font-family: var(--font-sans);
-        letter-spacing: 1.5px;
+        letter-spacing: 1.2px;
         font-weight: 100;
-        padding-top: 5px;
+        margin-top:0px;
         padding-bottom: 5px;
     }
     .blog-section-title {
@@ -168,6 +170,9 @@
         /* On mobile, the right column will be on top of the left column */
         .right-column {
             order: -1;
+        }
+        .normal-text {
+            margin-top:20px;
         }
     }
 </style>

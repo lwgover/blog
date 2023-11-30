@@ -1,8 +1,9 @@
-import { fetchMarkdownPosts } from '$lib/utils';
+import { fetchMarkdownPosts} from '$lib/utils';
 import { json } from '@sveltejs/kit';
 
 export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts();
+    console.log(allPosts);
     for(let i = 0; i < allPosts.length; i++) {
         if(!('meta' in allPosts[i])){
             allPosts.splice(i, 1);

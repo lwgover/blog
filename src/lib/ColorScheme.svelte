@@ -52,7 +52,7 @@
         outline: none;
     }
     :global(body.dark-mode) {
-        --background-color: #fcefe0;
+        --background-color: #f8ede0;
         --title-color: #218380;
         --accent-color: #d81159;
         --text-color: #121218;

@@ -20,7 +20,7 @@
     <ul class="header-icons">
         <li class="icon"><ColorScheme /></li>
         <a
-            href="https://upload.wikimedia.org/wikipedia/commons/4/46/Generic_Feed-icon.svg"
+            href="./rss"
             ><li class="icon"><Rss /></li></a
         >
     </ul>
@@ -95,9 +95,6 @@
         margin-left: 15px;
     }
     @media (max-width: 767px) {
-        .blog-title {
-            font-size: 35px;
-        }
         #header-underline {
             transform: translate(-3px, -18px);
             width: 80%;
@@ -118,15 +115,15 @@
             margin: 0px;
         }
         .blog-title {
-            font-size: 2rem;
-            letter-spacing: 2.3px;
-            padding-top: 13px;
+            font-size: 1.8rem;
+            letter-spacing: 2.1px;
+            padding-top: 15px;
         }
         .header {
             height: 60px;
             overflow: hidden;
         }
-        @media (min-width: 415px) {
+        @media (min-width: 390px) {
             .logo-container {
                 border: 0;
                 clip: rect(0 0 0 0);
@@ -140,7 +137,7 @@
             }
         }
     }
-    @media (max-width: 414px) {
+    @media (max-width: 390px) {
         .blog-header-words-container {
             border: 0;
             clip: rect(0 0 0 0);
