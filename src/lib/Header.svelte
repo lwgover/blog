@@ -7,26 +7,26 @@
 <div class="header">
     <a class="home-link" href="/">
         <div class="blog-header">
-            <div class="logo-container">
-                <Logo height={"100px"} width={"100px"} />
-            </div>
             <div class="blog-header-words-container vertically-align">
                 <p class="blog-title">Lucas's Blog</p>
                 <div class="gradient-underline" id="header-underline" />
             </div>
         </div>
     </a>
-    <div class="right-side" />
-    <ul class="header-icons">
-        <li class="icon"><ColorScheme /></li>
-        <a
-            href="./rss"
-            ><li class="icon"><Rss /></li></a
-        >
-    </ul>
+    <div class="right-side">
+        <ul class="header-icons">
+            <li class="icon"><ColorScheme /></li>
+            <a href="/rss.xml"><li class="icon"><Rss /></li></a>
+        </ul>
+    </div>
 </div>
 
 <style>
+    .outline {
+        padding: 2px;
+        margin: 20px;
+        border-radius: 20px;
+    }
     .icon {
         display: inline-block;
         width: fit-content;
@@ -43,6 +43,9 @@
     }
     .header {
         display: flex;
+        margin: auto;
+        width: 1300px;
+        max-width: 100vw;
     }
     .right-side {
         margin-left: auto;
@@ -54,6 +57,7 @@
         padding: 0px;
         margin: 0px;
         text-decoration: none;
+        border-radius: 18px;
     }
     .logo-container {
         display: inline-block;
@@ -72,7 +76,7 @@
     .blog-title {
         margin: 0px;
         padding: 0px;
-        color: var(--text-color);
+        color: var(--header-color);
         font-size: 48px;
         width: fit-content;
         padding: 10px;
@@ -81,18 +85,19 @@
         border-radius: 5px;
         transition: all 0.3s;
         display: inline-block;
-        font-family: var(--font-sans);
+        font-family: var(--font-serif);
     }
     .blog-header {
         width: fit-content;
-        margin: 20px;
+        margin: 10px;
         margin-top: 10px;
+        margin-left: 10px;
     }
     #header-underline {
-        transform: translate(0, -23px);
+        transform: translate(0, -25px);
         width: 83%;
         height: 5px;
-        margin-left: 15px;
+        margin-left: 10px;
     }
     @media (max-width: 767px) {
         #header-underline {
@@ -149,8 +154,8 @@
             width: 1px;
             white-space: nowrap;
         }
-        .logo-container{
-            transform: scale(0.50) translate(-20px, -20px);
+        .logo-container {
+            transform: scale(0.5) translate(-20px, -20px);
         }
     }
 </style>
