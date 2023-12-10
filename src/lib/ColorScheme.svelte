@@ -13,11 +13,20 @@
     // 100 and 80
 </script>
 
+
 <button on:click={toggle}>
     <svg width="50px" height="50px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={`transform: rotate(${-90 * $colorProgress}deg) scale(${1 - (0.2 * $colorProgress)}); transition: all 0.1s;`}>
-        <!-- Circle 1 -->
-        <circle cx="100" cy="100" r={`${70-(15*$colorProgress)}`} fill="var(--text-color)" />
-        <circle cx={`${125 - (25*$colorProgress)}`} cy={`${75 + (25*$colorProgress)}`} r={`${55 - (15*$colorProgress)}`} fill="var(--background-color)" />
+        <defs>
+            <!-- Define a mask with the first circle -->
+            <mask id="mask" maskUnits="userSpaceOnUse">
+                <rect width="100%" height="100%" fill="#ffffff" /> <!-- White rectangle to reset the mask -->
+                <circle cx={`${125 - (25*$colorProgress)}`} cy={`${75 + (25*$colorProgress)}`} r={`${55 - (15*$colorProgress)}`}  fill="#000000" /> <!-- Black circle to subtract from the mask -->
+            </mask>
+        </defs>
+
+        <!-- Draw the second circle with the mask applied and fill-rule set to evenodd -->
+        <circle cx="100" cy="100" r={`${70 - (15 * $colorProgress)}`} fill="var(--header-color)" mask="url(#mask)" fill-rule="evenodd" />
+    
       
         <!-- Sun Rays -->
         <line x1="100" y1="30" x2="100" y2="5" stroke="var(--text-color)" stroke-width="15" opacity={`${$colorProgress}`} />

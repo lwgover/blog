@@ -1,6 +1,8 @@
 ---
 title: From Platform to Paranoia. How the lunatic fringe took over the GOP
-date: May 5th, 2023 
+date: May 5th, 2023
+length: 5
+image: https://files.nc.gov/ncdcr/this-day-nc/RV-AN902_BKRV_B_GR_20140718101641.jpg
 --- 
 There has always been a conspiratorial and authoritarian element within the ranks of the right. In 1958, Robert W. Welch Jr. created the John Birch Society (JBS)—a wildly conspiratorial group founded on the belief that there was a communist conspiracy within the government that “was much deeper, and far broader than even Joseph McCarthy had imagined” (Continetti 2022, 150). The JBS grew rapidly, drawing support from the latent anti-establishment and anti-elitist energies in the postwar United States. Those who felt unrepresented by JFK Democrats and Nixon Republicans flocked to the JBS, whose membership reached roughly 100,000 by 1966 (Trickey 2021). The Society often promoted anti-semitic messaging, with one of Welch’s lieutenants endorsing the abhorrent Protocols of the Elders of Zion (Continetti 2022, 152). By 1964, there was a growing distaste for the JBS across the political spectrum. Bob Dylan mocked the organization with his song “Talkin’ John Birch Paranoid Blues.” Meanwhile, Republicans like Barry Goldwater and Ronald Reagan worried about the JBS’s influence on their electability (Trickey 2021). To combat this, Republican elites began to denounce the group. Reagan describe them as a “lunatic fringe” (Trickey 2021). The head of the conservative editorial magazine National Review, William F. Buckley, Jr., shot out a series of columns denouncing the group’s toxic influence on Movement Conservatism. Through the combined efforts of conservative elites, the JBS was effectively excommunicated from the right. 
 

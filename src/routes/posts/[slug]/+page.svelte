@@ -4,16 +4,19 @@
     import "$lib/styles/splendor.css";
     import { browser } from "$app/environment";
     import '$lib/styles/code.css'
+    import Header from "$lib/Header.svelte";
 
     export let data;
     const { title, date, length, image, Content } = data;
+    console.log(image)
+
 </script>
 
 <Seo {title} description={"Lucas's Blog"} />
+<div class ='header-content' style={image != null ? `background-image: url(${image})` : ''}>
+<Header/>
+</div>
 <article class="blog-post">
-    <div class='img-container'>
-        <img src={image}>
-    </div> 
     <h1 class="blog-post-title">{title}</h1>
     <div class="blog-post-info-container">
         <div class="blog-pfp">
@@ -30,24 +33,19 @@
 </article>
 
 <style>
+    .header-content {
+        width:100vw;
+        height: 100vh;
+        background-image: linear-gradient(45deg, var(--title-color), var(--middle-color), var(--accent-color));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
     img {
         padding:0px;
         margin:0px;
         height:100%;
-        transform: scale(1.1);
-    }
-    .img-container {
-        border-radius: 10px;
-        width:80%;
-        margin:auto;
-        overflow: hidden;
-        box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
-        padding:0px;
-    }
-    .content-container {
-        display:flex;
-        margin:auto;
-        width:fit-content;
+        width: 100%;
     }
     .blog-post {
         margin: auto;
