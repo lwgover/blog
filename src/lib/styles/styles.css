@@ -13,8 +13,9 @@
 	--header-color: #ffffff;
 	--text-color: #ffffff;
 	--blog-text-color: #ffffff;
-	--middle-color: #7c5db2;
+	--middle-color: #7656ae;
 	--article-text-color: #cfcfcf;
+	--background-color-rgb: 18,18,24;
 	transition: all 0.3s
 	}
 body {
@@ -24,7 +25,8 @@ body {
 	background-color: var(--color-bg-1);
 	background-size: 100vw 100vh;
 	background-color: var(--background-color);
-	transition: background-color 0.3s
+	transition: background-color 0.3s;
+	background-image: linear-gradient(-45deg, var(--title-color), var(--middle-color), var(--accent-color));
 }
 
 body::-webkit-scrollbar {
@@ -145,9 +147,15 @@ button:focus:not(:focus-visible) {
 .gradient-underline {
 	width: 100%;
 	height: 7px;
-	background-image: linear-gradient(45deg, var(--title-color), var(--middle-color), var(--accent-color));
+	background-image: linear-gradient(-45deg, var(--title-color), var(--middle-color), var(--accent-color));
 	margin: 0px;
 }
+.topography-texture {
+	background-image: url(https://blog.lucasgover.com/images/topography.svg);
+	width:100%;
+	height:100%;
+}
+
 @media (max-width: 767px) {
         .blog-title {
 			font-size: 2em;

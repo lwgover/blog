@@ -22,6 +22,7 @@
 </div>
 
 <style>
+    
     .outline {
         padding: 2px;
         margin: 20px;
@@ -44,8 +45,7 @@
     .header {
         display: flex;
         margin: auto;
-        width: 1300px;
-        max-width: 100vw;
+        width: 100vw;
     }
     .right-side {
         margin-left: auto;
@@ -143,17 +143,6 @@
         }
     }
     @media (max-width: 390px) {
-        .blog-header-words-container {
-            border: 0;
-            clip: rect(0 0 0 0);
-            height: auto;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;
-            white-space: nowrap;
-        }
         .logo-container {
             transform: scale(0.5) translate(-20px, -20px);
         }

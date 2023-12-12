@@ -61,7 +61,7 @@
         outline: none;
     }
     :global(body.dark-mode) {
-        --background-color: #f8ede0;
+        --background-color: #ffffff;
         --title-color: #218380;
         --accent-color: #d81159;
         --text-color: #121218;
@@ -69,5 +69,6 @@
         --header-color: #30303f;
         --background-accent-color: #ffffff;
         --article-text-color: #242436;
+        --background-color-rgb: 255,255,255;
     }
 </style>
