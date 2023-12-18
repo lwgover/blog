@@ -33,9 +33,9 @@
         <div class="column right-column">
             <p class="normal-text">
                 I'm not sure what I'm gonna use this for, but a blog seemed like
-                a fun thing to have. Current Status is that markdown doesn't
-                compile right, and the whole vibe is a work in progress. Hope
-                you enjoy your stay.
+                a fun thing to have. Current Status is that sometimes pages don't load, and that's ok! 
+                The whole vibe is a work in progress. 
+                Hope you enjoy your stay.
             </p>
             <p class="quote">
                 Many [view] blogging as civic engagement for themselves and their readers. As a practice of critical thinking, blogging provides the space for writers to work through ideas before the polish. It affords an enclave to challenge ideas and arguments before the work is complete.

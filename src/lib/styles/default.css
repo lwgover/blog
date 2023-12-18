@@ -212,3 +212,10 @@ div .markdown-img {
     font-family: 'Inter','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style-type: none;
 }
+
+@media (max-width: 450px) {
+
+    .blog-post-title {
+        font-size: 2.5em;
+    }
+}

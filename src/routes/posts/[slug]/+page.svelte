@@ -7,6 +7,9 @@
     import Header from "$lib/Header.svelte";
     import { tweened } from "svelte/motion";
 
+    import { fly, blur } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+
     export let data;
     const { title, date, length, image, Content } = data;
     console.log(image);
@@ -19,7 +22,7 @@
 </script>
 
 <Seo {title} description={"Lucas's Blog"} />
-<div class="header-content">
+<div class="header-content" transition:blur={{ amount: 10 }}>
     <div
         class={`topography-texture ${image != null ? "possibly-an-image" : ""}`}
         style={image != null ? `background-image: url(${image})` : ""}
@@ -50,7 +53,7 @@
         </div>
     </div>
 </div>
-<div class="skew shadow" style="padding-top:5px">
+<div class="skew shadow" style="padding-top:5px" transition:fly={{ delay: 50, duration: 500, x: 0, y: 700, opacity: 0.5, easing: quintOut }}>
     <div class="gradient-underline" />
     <div class="unskew">
         <article class="blog-post">
@@ -222,7 +225,7 @@
         width: 80px;
         border-radius: 50px;
         overflow: hidden;
-        box-shadow: 0 0 0 5px var(--header-color-transparent);
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.7);
         margin: 10px;
     }
     .gradient-text {
