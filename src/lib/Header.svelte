@@ -1,18 +1,17 @@
 <script>
-    import Logo from "$lib/Logo.svelte";
     import ColorScheme from "$lib/ColorScheme.svelte";
     import Rss from "$lib/images/rss.svelte";
 </script>
 
 <div class="header">
-    <a class="home-link" href="/">
         <div class="blog-header">
+            <a class="home-link">
             <div class="blog-header-words-container vertically-align">
                 <p class="blog-title">Lucas's Blog</p>
-                <div class="gradient-underline" id="header-underline" />
+                <!-- <div class="gradient-underline" id="header-underline" /> -->
             </div>
+        </a>
         </div>
-    </a>
     <div class="right-side">
         <ul class="header-icons">
             <li class="icon"><ColorScheme /></li>
@@ -22,12 +21,6 @@
 </div>
 
 <style>
-    
-    .outline {
-        padding: 2px;
-        margin: 20px;
-        border-radius: 20px;
-    }
     .icon {
         display: inline-block;
         width: fit-content;
@@ -57,53 +50,47 @@
         padding: 0px;
         margin: 0px;
         text-decoration: none;
-        border-radius: 18px;
-    }
-    .logo-container {
-        display: inline-block;
-        width: fit-content;
-        height: fit-content;
-        margin: 0px;
-        padding: 0px;
-        vertical-align: middle;
-        overflow: hidden;
-        transition: all 0.5s;
     }
     .vertically-align {
         display: inline-block;
         vertical-align: middle;
     }
     .blog-title {
-        margin: 0px;
-        padding: 0px;
         color: var(--header-color);
-        font-size: 48px;
+        font-size: 36px;
         width: fit-content;
-        padding: 10px;
+        padding: 5px;
         font-weight: 300;
         letter-spacing: 3px;
         border-radius: 5px;
         transition: all 0.3s;
         display: inline-block;
         font-family: var(--font-serif);
+        /* border: 4px solid var(--header-color); */
+        /* transform: skew(-12deg); */
+        /* background-color: rgba(var(--background-color-rgb),0.2); */
+        background-color: var(--header-color);
+        color: var(--background-color);
     }
     .blog-header {
         width: fit-content;
         margin: 10px;
-        margin-top: 10px;
-        margin-left: 10px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 0px;
     }
     #header-underline {
-        transform: translate(0, -25px);
-        width: 83%;
-        height: 5px;
+        transform: translate(-5px, -20px);
+        width: 82%;
+        height: 4px;
         margin-left: 10px;
+        border-radius: 5px;
     }
     @media (max-width: 767px) {
         #header-underline {
             transform: translate(-3px, -18px);
-            width: 80%;
-            height: 5px;
+            width: 78%;
+            height: 4px;
             margin-left: 15px;
         }
         .icon {
@@ -114,6 +101,8 @@
             margin: 10px;
             margin-top: 0px;
             padding: 0px;
+            color: var(--background-color);
+            padding-top: 10px;
         }
         .header-icons {
             padding: 0px;
@@ -122,29 +111,10 @@
         .blog-title {
             font-size: 1.8rem;
             letter-spacing: 2.1px;
-            padding-top: 15px;
         }
         .header {
-            height: 60px;
+            height: 65px;
             overflow: hidden;
-        }
-        @media (min-width: 390px) {
-            .logo-container {
-                border: 0;
-                clip: rect(0 0 0 0);
-                height: auto;
-                margin: 0;
-                overflow: hidden;
-                padding: 0;
-                position: absolute;
-                width: 1px;
-                white-space: nowrap;
-            }
-        }
-    }
-    @media (max-width: 390px) {
-        .logo-container {
-            transform: scale(0.5) translate(-20px, -20px);
         }
     }
 </style>

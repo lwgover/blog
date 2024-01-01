@@ -2,7 +2,7 @@ import { join, resolve } from 'node:path';
 import addClasses from "rehype-class-names";
 import { mdsvex, escapeSvelte } from 'mdsvex'
 import shiki from 'shiki'
-import toc from "@jsdevtools/rehype-toc"
+//import toc from "@jsdevtools/rehype-toc"
 import slug from "rehype-slug"
 
 const __dirname = resolve();
@@ -15,7 +15,7 @@ const config = {
     },
     highlight: {
 		highlighter: async (code, lang = 'text') => {
-			const highlighter = await shiki.getHighlighter({ theme: 'github-dark' })
+			const highlighter = await shiki.getHighlighter({ theme: 'material-theme-palenight' })
 			const html = escapeSvelte(highlighter.codeToHtml(code, { lang }))
 			return `{@html \`${html}\` }`
 		}

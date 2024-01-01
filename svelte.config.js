@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
-import firebase from "svelte-adapter-firebase";
 import { mdsvex } from 'mdsvex';
 import mdsvex_config from './mdsvex.config.js'
 
@@ -9,6 +8,9 @@ const config = {
 	kit: {
 		/* Kit options here */
 		adapter: adapter(),
+		paths: {
+			base: process.env.NODE_ENV === "production" ? "" : "",
+		},
 	},
 
 	extensions: ['.svelte', '.md'],

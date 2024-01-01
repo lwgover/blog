@@ -13,7 +13,6 @@
     console.log(image);
 </script>
 
-
 <SvelteSeo title="{title}," description="Lucas's Blog" />
 <div
     class="header-content"

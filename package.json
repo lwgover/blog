@@ -5,7 +5,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"deploy":"npm run build && firebase deploy --only hosting",
+		"deploy": "gh-pages -d build -t true",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
@@ -29,6 +29,11 @@
 	"type": "module",
 	"dependencies": {
 		"firebase": "^10.6.0",
-		"svelte-markdown": "^0.4.0"
+		"gh-pages": "^6.1.0",
+		"rehype-class-names": "^1.0.14",
+		"rehype-slug": "^6.0.0",
+		"shiki": "^0.14.7",
+		"svelte-markdown": "^0.4.0",
+		"svelte-seo": "^1.5.4"
 	}
 }

@@ -1,7 +1,4 @@
 <script>
-    import Seo from "../lib/Seo.svelte";
-    import Waves from "../lib/Waves.svelte";
-    import Logo from "../lib/Logo.svelte";
     import Header from "$lib/Header.svelte";
 
     export let data;
@@ -9,7 +6,6 @@
 </script>
 
 <section>
-    <Seo title={"Lucas's Blog"} description={"Lucas Gover's Blog"} />
     <Header />
     <div class="two-columns">
         <div class="column left-column">
